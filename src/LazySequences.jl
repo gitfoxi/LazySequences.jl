@@ -56,11 +56,11 @@ function rest(s::Cat)
 end
 
 function getindex(s::Cat, n::Int64)
-    sequence = Any[]
+    local r
     for i in take(n, s)
-        push!(sequence, i)
+        r = i
     end
-    sequence[end]
+    return r
 end
 
 cat(a) = seq(a)
